@@ -1,6 +1,7 @@
 # Create Directory 
 mkdir -p src
 mkdir -p notebook
+mkdir -p data
 
 # Create files
 touch .env

@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f6fa;
+    background: url("../static/images/medical-bg.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    /* makes it responsive */
+}
+
+.chat-container {
+    width: 500px;
+    max-width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* background: #fff; */
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.chat-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f1f2f6;
+}
+
+.message {
+    padding: 12px 15px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+
+.user-message {
+    align-self: flex-end;
+    background-color: #DCF8C6;
+    color: #000;
+    border-top-right-radius: 0;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #DCF8C6;
+    color: #000;
+    border-top-left-radius: 0;
+}
+
+
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: #fafafa;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+.chat-footer button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.chat-footer button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+.message-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+
+.message-container.user {
+    justify-content: flex-end;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* 👈 makes image circular */
+    object-fit: cover;
+    margin: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
