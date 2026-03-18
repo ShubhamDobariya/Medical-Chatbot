@@ -1,0 +1,26 @@
+# flask
+# langchain
+# langchain-community
+# langchain-core
+# langchain-groq
+# langchain-huggingface
+# langchain-pinecone
+# pinecone-client
+# sentence-transformers
+# pypdf
+# python-dotenv
+# gunicorn
+# markdown
+
+
+flask
+langchain
+langchain-community
+langchain-core
+langchain-groq
+langchain-huggingface
+pinecone-client
+python-dotenv
+gunicorn
+markdown
+requests
