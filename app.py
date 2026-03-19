@@ -1,5 +1,7 @@
 from flask import Flask, render_template, jsonify, request
-from langchain_community.vectorstores import Pinecone
+
+# from langchain_community.vectorstores import Pinecone
+from langchain_pinecone import Pinecone as PineconeVectorStore
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_groq import ChatGroq
 from langchain_core.runnables import RunnablePassthrough
@@ -25,7 +27,10 @@ embeddings = download_embeddings()
 
 index_name = "medical-chatbot"
 
-docsearch = Pinecone.from_existing_index(index_name=index_name, embedding=embeddings)
+# docsearch = Pinecone.from_existing_index(index_name=index_name, embedding=embeddings)
+docsearch = PineconeVectorStore.from_existing_index(
+    index_name=index_name, embedding=embeddings
+)
 
 retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
@@ -142,5 +147,5 @@ def chat():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))  # 👈 Railway sets PORT automatically
+    port = int(os.environ.get("PORT", 8080))  # sets PORT automatically
     app.run(host="0.0.0.0", port=port, debug=False)
