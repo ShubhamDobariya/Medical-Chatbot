@@ -206,3 +206,16 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 "data/" 
+
+
+.env
+__pycache__/
+*.pyc
+*.pyo
+data/
+*.egg-info/
+Medical_ChatBot.egg-info/
+notebook/
+.medicalchatbotvenv/
+venv/
+template.sh

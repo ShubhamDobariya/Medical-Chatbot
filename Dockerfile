@@ -10,4 +10,4 @@ COPY . .
 EXPOSE 7860
 
 # CMD ["gunicorn", "app:app", "--host=0.0.0.0", "--port=7860"]
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:7860"]
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:7860", "--timeout=120", "--workers=1"]

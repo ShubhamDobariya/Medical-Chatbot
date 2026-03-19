@@ -10,36 +10,36 @@ import os
 
 
 # Extract text from PDF files
-def load_pdf_files(data):
-    """Process all PDF files in a directory"""
+# def load_pdf_files(data):
+#     """Process all PDF files in a directory"""
 
-    loader = DirectoryLoader(data, glob="**/*.pdf", loader_cls=PyPDFLoader)
-    documents = loader.load()
-    return documents
+#     loader = DirectoryLoader(data, glob="**/*.pdf", loader_cls=PyPDFLoader)
+#     documents = loader.load()
+#     return documents
 
 
 # Reduce metadata from Document
-def filter_to_reduce_metadata_docs(docs: List[Document]) -> List[Document]:
-    """
-    Given a list of Document objects, return a new list of Document objects,
-    containing only 'source' in metadata and the original 'page_content'.
-    """
-    reduce_docs: List[Document] = []
-    for doc in docs:
-        src = doc.metadata.get("source")
-        reduce_docs.append(
-            Document(page_content=doc.page_content, metadata={"source": src})
-        )
-    return reduce_docs
+# def filter_to_reduce_metadata_docs(docs: List[Document]) -> List[Document]:
+#     """
+#     Given a list of Document objects, return a new list of Document objects,
+#     containing only 'source' in metadata and the original 'page_content'.
+#     """
+#     reduce_docs: List[Document] = []
+#     for doc in docs:
+#         src = doc.metadata.get("source")
+#         reduce_docs.append(
+#             Document(page_content=doc.page_content, metadata={"source": src})
+#         )
+#     return reduce_docs
 
 
 ## Split the document into smaller chunks
-def text_split(reduce_metadata_docs):
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=500, chunk_overlap=20, length_function=len
-    )
-    texts_chunk = text_splitter.split_documents(reduce_metadata_docs)
-    return texts_chunk
+# def text_split(reduce_metadata_docs):
+#     text_splitter = RecursiveCharacterTextSplitter(
+#         chunk_size=500, chunk_overlap=20, length_function=len
+#     )
+#     texts_chunk = text_splitter.split_documents(reduce_metadata_docs)
+#     return texts_chunk
 
 
 # Download the embedding from HuggingFace
