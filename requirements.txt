@@ -20,6 +20,8 @@ langchain-core
 langchain-groq
 langchain-huggingface
 pinecone-client
+langchain-pinecone
+pinecone
 python-dotenv
 gunicorn
 markdown
