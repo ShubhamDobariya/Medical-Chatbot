@@ -1,15 +1,3 @@
----
-title: Medical Chatbot
-emoji: 🩺
-colorFrom: red
-colorTo: blue
-sdk: docker
-app_port: 7860
-pinned: false
-license: mit
-short_description: RAG medical chatbot powered by Gale Encyclopedia of Medicine
----
-
 # 🩺 Medical Chatbot — RAG over the Gale Encyclopedia of Medicine
 
 An end-to-end **Retrieval-Augmented Generation (RAG)** chatbot that answers medical questions strictly from the **Gale Encyclopedia of Medicine (2nd Edition)**. Built with **LangChain**, **Pinecone**, **Groq LLM**, **HuggingFace embeddings**, and **Flask** — and deployed on **🤗 Hugging Face Spaces**.
