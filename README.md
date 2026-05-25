@@ -17,7 +17,7 @@ The pipeline goes well beyond a vanilla RAG: it performs **query expansion**, **
 
 ## 🚀 Live Demo
 
-👉 **Try it live on Hugging Face Spaces:** [https://shubhamdobariya-medical-chatbot.hf.space/](https://huggingface.co/spaces/)
+👉 https://shubhamdobariya-medical-chatbot.hf.space/
 
 ---
 
